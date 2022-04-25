@@ -1,0 +1,29 @@
+<form #registerForm="ngForm" (ngSubmit)="sendContract()" autocomplete="off">
+    <br>
+    <input type="text" class="form-control" name="businessChannel" [(ngModel)]="contract.businessChannel"
+        placeholder="Business Channel">
+        <br>
+        <br>
+    <input type="text" class="form-control" name="typeOfRisk" [(ngModel)]="contract.typeOfRisk"
+        placeholder="Type Of Risk">
+        <br>
+        <br>
+    <input type="text" class="form-control" name="contractType" [(ngModel)]="contract.contractType"
+        placeholder="Contract Type">
+        <br>
+        <br>
+    <input type="text" class="form-control" name="coveragePercentage" [(ngModel)]="contract.coveragePercentage"
+        placeholder="Coverage Percentage %">
+        <br>
+        <br>
+        <label for="contractStartDate">Contract Initiation</label>
+        <input type="datetime-local" class="form-control" name="contractStartDate" [(ngModel)]="contract.contractStartDate">
+        <br>
+        <br>
+        <label for="contractEndDate">Contract Conclusion</label>
+        <input type="datetime-local" class="form-control" name="contractEndDate" [(ngModel)]="contract.contractEndDate">
+        <hr>
+        <button type="submit" class="btn btn-primary" style="margin: 1%;">Create Contract</button>
+    <br>
+    <button type="button" class="btn btn-danger" (click)="cancl()" style="margin: 1%;">Close</button>
+</form>

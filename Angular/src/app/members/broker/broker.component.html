@@ -1,0 +1,43 @@
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th scope="col">#Contract_ID</th>
+            <th scope="col">BusinessChannel</th>
+            <th scope="col">AssuredSum</th>
+            <th scope="col">TotalAssetValue</th>
+            <th scope="col">MonthlyPremium</th>
+            <th scope="col">Type Of Risk</th>
+            <th scope="col">Contract Type</th>
+            <th scope="col">Contract Start Date</th>
+            <th scope="col">Contract End Date</th>
+            <!-- <th scope="col">Broker Commission</th> -->
+            <th scope="col">Coverage %</th>
+            <th scope="col">Contract Status</th>
+            <th scope="col"> Broker Commission </th>
+            <th scope="col">  </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of contracts">
+            <ng-container *ngIf="item.contracrStatus == 'To Broker' ">
+            <th scope="row">{{item.contractId}}</th>
+            <td>{{item.businessChannel}}</td>
+            <td>{{item.assuredSum}}</td>
+            <td>{{item.totalAssetValue}}</td>
+            <td>{{item.monthlyPremium}}</td>
+            <td>{{item.typeOfRisk}}</td>
+            <td>{{item.contractType}}</td>            
+            <td>{{item.contractStartDate}}</td>
+            <td>{{item.contractEndDate}}</td>
+            <!-- <td>{{item.brokerCommission}}</td> -->
+            <td>{{item.coveragePercentage}}</td>
+            <td>{{item.contracrStatus}}</td>
+            <input type="number" [(ngModel)]="item.brokerCommission"/>   
+            <td> <button type="button" class="btn btn-outline-info" (click)="send(item.contractId , item ,item.brokerCommission )">
+                Send
+             </button></td>
+            </ng-container>
+        </tr>
+    </tbody>
+</table>
+

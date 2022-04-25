@@ -1,0 +1,40 @@
+<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-primary">
+  <div class="container-fluid">
+    <a class="navbar-brand" routerLink='/' ><img style="height: 60px;" src="../assets/Insurewave-logos_transparent.png" alt="Blocked"></a>
+    <!--  -->
+    <ng-container *ngIf="who">
+    <ul class="navbar-nav me-auto mb-2 mb-md-0" >
+      <ng-container *ngIf="accountService.currentUser$ | async">
+        <li class="nav-item">
+          <a class="nav-link " routerLink='/'>Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink='/client'>Assets</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink='/client/contract'>Contracts</a>
+        </li>
+      </ng-container>
+    </ul>
+  </ng-container>
+    <div class="dropdown" *ngIf="(accountService.currentUser$ | async) as user" dropdown>
+      <a  class="dropdown-toggle text-light" dropdownToggle style="text-decoration: none;"> Welcome {{user.name | titlecase}} </a>
+      <div class="dropdown-menu mt-3" *dropdownMenu>
+        <a  class="dropdown-item">Edit Profile</a>
+        <div class="dropdown-divider"></div>
+        <a  class="dropdown-item" (click)="logout()" >Logout</a>
+      </div>
+    </div>
+    <form
+      #loginForm="ngForm"
+      *ngIf="(accountService.currentUser$ | async) === null"
+      class="d-flex"
+      (ngSubmit)="login()"
+      autocomplete="off"
+    >
+      <input class="form-control me-2" name="email" [(ngModel)]="model.email" type="text" placeholder="Email ID" />
+      <input class="form-control me-2" name="password" [(ngModel)]="model.password" type="password" placeholder="Password" />
+      <button class="btn btn-secondary" type="submit">Login</button>
+    </form>
+  </div>
+</nav>

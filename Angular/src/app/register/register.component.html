@@ -1,0 +1,26 @@
+<form #registerForm ="ngForm" (ngSubmit)="register()" autocomplete="off" >
+    <h2 class="text-center text-primary">Sign Up</h2>
+    <hr>
+    <div class="form-group">
+      <input type="text" class="form-control" name="email" [(ngModel)]="model.email"  placeholder="@Email">
+      <br>
+      <input type="password" class="form-control" name="password" [(ngModel)]="model.password"  placeholder="Enter Your Password">
+      <br>
+      <input type="text" class="form-control" name="name" [(ngModel)]="model.name"  placeholder="Your Name">
+      <br>
+      <label for="gender" style="padding: 5px;">
+        Gender
+      </label>
+      <br>
+      Male : <input type="radio" name="gender" value="male" [(ngModel)]="model.gender">
+      Female : <input type="radio" name="gender" value="female" [(ngModel)]="model.gender">
+      <br>
+      <hr>
+     <input type="text" class="form-control" name="userType" [(ngModel)]="model.userType"  placeholder="UserType (Client , Broker , Insurer)">
+    </div>
+    <br>
+    <div class="form-group text-center">
+      <button class="btn btn-success" style="margin: 5px;" type="submit">Register</button>
+      <button class="btn btn-warning" (click)="cancel()" style="margin: 5px;" type="button">Cancel</button>
+    </div>
+</form>

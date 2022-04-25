@@ -1,0 +1,46 @@
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th scope="col">#Asset_ID</th>
+            <th scope="col">Name</th>
+            <th scope="col">Price</th>
+            <th scope="col">ContentType</th>
+            <th scope="col">Quantity</th>
+            <th scope="col"></th>
+            <th scope="col">Link Contract</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of assets">
+            <th scope="row">{{item.assetId}}</th>
+            <td>{{item.assetName}}</td>
+            <td>{{item.assetPrice}}</td>
+            <td>{{item.contentType}}</td>
+            <td>{{item.quantity}}</td>
+            <td><button type="button" class="btn btn-outline-danger" (click)="deleteasset(item.assetId)">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash3" viewBox="0 0 16 16">
+  <path d="M6.5 1h3a.5.5 0 0 1 .5.5v1H6v-1a.5.5 0 0 1 .5-.5ZM11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3A1.5 1.5 0 0 0 5 1.5v1H2.506a.58.58 0 0 0-.01 0H1.5a.5.5 0 0 0 0 1h.538l.853 10.66A2 2 0 0 0 4.885 16h6.23a2 2 0 0 0 1.994-1.84l.853-10.66h.538a.5.5 0 0 0 0-1h-.995a.59.59 0 0 0-.01 0H11Zm1.958 1-.846 10.58a1 1 0 0 1-.997.92h-6.23a1 1 0 0 1-.997-.92L3.042 3.5h9.916Zm-7.487 1a.5.5 0 0 1 .528.47l.5 8.5a.5.5 0 0 1-.998.06L5 5.03a.5.5 0 0 1 .47-.53Zm5.058 0a.5.5 0 0 1 .47.53l-.5 8.5a.5.5 0 1 1-.998-.06l.5-8.5a.5.5 0 0 1 .528-.47ZM8 4.5a.5.5 0 0 1 .5.5v8.5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5Z"></path>
+</svg>
+                
+              </button></td>
+              <td><select [(ngModel)]="contractId">
+                  <option *ngFor="let id of contracts" [value] = "id.contractId"> {{(id.contractId)}} </option>
+              </select></td>
+              <td><button type="button" class="btn btn-outline-danger" (click)="linkAsset(contractId , item , item.assetId ,item.contractId)">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link-45deg" viewBox="0 0 16 16">
+  <path d="M4.715 6.542 3.343 7.914a3 3 0 1 0 4.243 4.243l1.828-1.829A3 3 0 0 0 8.586 5.5L8 6.086a1.002 1.002 0 0 0-.154.199 2 2 0 0 1 .861 3.337L6.88 11.45a2 2 0 1 1-2.83-2.83l.793-.792a4.018 4.018 0 0 1-.128-1.287z"></path>
+  <path d="M6.586 4.672A3 3 0 0 0 7.414 9.5l.775-.776a2 2 0 0 1-.896-3.346L9.12 3.55a2 2 0 1 1 2.83 2.83l-.793.792c.112.42.155.855.128 1.287l1.372-1.372a3 3 0 1 0-4.243-4.243L6.586 4.672z"></path>
+</svg>
+              </button></td>
+        </tr>
+    </tbody>
+</table>
+<br>
+<button type="button" class="btn btn-outline-danger" (click)="addMode()">
+    Add Assets
+</button>
+
+<br>
+<div class="col-4" *ngIf="Mode">
+    <app-asset-form (cancel)="cancelMode($event)"></app-asset-form>
+  </div>

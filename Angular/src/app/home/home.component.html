@@ -1,0 +1,124 @@
+<div class="container" style="background: rgba(193, 185, 185, 0.14);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(10px);
+-webkit-backdrop-filter: blur(10px);
+border: 1px solid rgba(193, 185, 185, 0.25);
+/* From https://css.glass */
+background: rgba(193, 185, 185, 0.14);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(10px);
+-webkit-backdrop-filter: blur(10px);
+border: 1px solid rgba(193, 185, 185, 0.25);
+"> 
+<div class="container mt-5">
+  <br>
+  <!-- style="background-image: url('https://www.ledgerinsights.com/wp-content/uploads/2018/05/Depositphotos_164469308_m-2015-810x542.jpg') ;" -->
+  <div *ngIf="!registerMode" style = 'text-align: center;'>
+    <h1>InsureWave</h1>
+    
+  <p class="lead">
+
+       All your Insurance Solution , Right here! ... Sign up ?
+   </p>
+   <div class="text-centre">
+    <button (click)="registerToggle()" class="btn btn-primary btn-lg" style="margin: 5px;">Register</button>
+    <button class="btn btn-info btn-lg mr-3" style="margin: 5px;" onclick="window.open('https://www.ey.com/en_in/insurance/blockchain-marine-insurance')" onauxclick="window.open('https://www.ey.com/en_in/insurance/blockchain-marine-insurance')">Learn More</button>
+   </div>
+  </div>
+<div *ngIf="registerMode" class="container">
+  <div class="row justify-content-center">
+    <div class="col-4">
+      <app-register (cancelRegister)="cancelRegisterMode($event)"></app-register>
+    </div>
+  </div>
+</div>
+</div>
+
+<ng-container *ngIf="!registerMode">
+
+<p class="parent-of-hyperlink-text-link">EY and Guardtime, as well as other <a href="/en_in/insurance" class="hyperlink-text-link">insurance industry</a> leaders, present Insurwave, the world's first blockchain-enabled platform. This platform integrates and secures the streams of disparate data sources involved in insuring shipments around the world.</p>
+
+<ul style="list-style-position: inside;"> 
+  <li>Claims to be paid in hours, not years</li> 
+  <li>Premiums to be agreed and settled in seconds</li> 
+  <li>Shippers to track assets and share data with brokers and insurers</li> 
+  <li>Brokers to focus more on servicing clients and less on administration</li> 
+  <li>Insurers to track their exposures in near real-time</li> 
+ </ul>
+ <div>
+   <h3 class="content-grid-title">Our latest thinking</h3> 
+   <a style="text-decoration: none;" href="/en_in/insurance/is-the-future-of-shipping-in-ships-and-ports--or-chips-and-block" class="hyperlink-text-link"><h4 class="article-title is-clipped">Is the future of shipping in ships and ports, or chips and blocks?</h4></a>
+   <p class="article-subheading is-clipped">Shipping is an industry that’s hard to change, but new market opportunities and new technologies are making tra…</p>
+   <div class="article-details"> <img class="article-image" src="https://assets.ey.com/content/dam/ey-sites/ey-com/en_gl/topics/insurance/ey-ship-sea-ice-edge-static.jpg.rendition.690.460.jpg" alt="Is the future of shipping in ships and ports, or chips and blocks?">
+    <br>
+    <br>
+    <span class="multiple-line article-date">28 Mar 2019 | </span>  
+    <span> <a href="/en_in/people/shaun-crawford" style="text-decoration: none;" class="article-author hyperlink-text-link">Shaun Crawford</a> </span>  
+   </div>
+  </div>
+  <hr>
+  <div class="tile-text-box"> 
+    <a style="text-decoration: none;" href="/en_in/blockchain/how-blockchain-is-reducing-fluidity-of-risk-in-marine-insurance" class="hyperlink-text-link"><h4 class="article-title is-clipped">How blockchain is reducing the fluidity of risk in marine insurance</h4></a>  
+    <p class="article-subheading is-clipped">EY and Guardtime are providing greater transparency and efficiency through blockchain technology in marine insuran…</p>  
+    <div class="article-details"> 
+      <img class="article-image" src="https://assets.ey.com/content/dam/ey-sites/ey-com/en_gl/topics/blockchain/ey-workers-anchor-chain-dry-dock.jpg.rendition.690.460.jpg" alt="How blockchain is reducing the fluidity of risk in marine insurance">
+      <br>
+      <br>
+     <span class="multiple-line article-date">10 Jul 2019 | </span>  
+     <span> <a style="text-decoration: none;" href="/en_in/people/shaun-crawford" class="article-author hyperlink-text-link">Shaun Crawford</a> </span>  
+    </div> 
+   </div>
+   <hr>
+   <div class="tile-text-box"> 
+    <a style="text-decoration: none;" href="/en_in/insurance/seven-technologies-insurers-must-master-for-digital-transformati" class="hyperlink-text-link"><h4 class="article-title is-clipped">Seven technologies insurers must master for digital transformation</h4></a>  
+    <p class="article-subheading is-clipped">If insurers don’t move quickly, new market entrants will do what Amazon has done to retail and robo-advisors are doin…</p>  
+    <div class="article-details"> 
+      <img class="article-image" src="https://assets.ey.com/content/dam/ey-sites/ey-com/en_gl/topics/insurance/ey-Artist-Clay-Sculpture-Art-Studio.jpg.rendition.690.460.jpg" alt="Seven technologies insurers must master for digital transformation">
+      <br>
+      <br>
+      <span class="multiple-line article-date">18 Jun 2018 | </span>  
+     <span> <a style="text-decoration: none;" href="/en_in/people/ey" class="article-author hyperlink-text-link">EY India</a> </span>  
+    </div> 
+   </div>
+   <hr>
+   <div class="tile-text-box"> 
+    <a style="text-decoration: none;" href="/en_in/insurance/the-future-of-insurance" class="hyperlink-text-link"><h4 class="article-title is-clipped">The future of insurance</h4></a>  
+    <p class="article-subheading is-clipped">How will driverless cars, smart homes and other new technology affect insurers? Is your business built for an era…</p>  
+    <div class="article-details"> 
+      <img class="article-image" src="https://assets.ey.com/content/dam/ey-sites/ey-com/en_gl/topics/insurance/EY-future-insurance-video-still.jpg.rendition.690.460.jpg" alt="The future of insurance">
+      <br>
+      <br>
+     <span class="multiple-line article-date">1 Apr 2019 | </span>  
+     <span> <a style="text-decoration: none;"  href="/en_in/people/david-hollander" class="article-author hyperlink-text-link">David Hollander</a> </span>  
+    </div> 
+   </div>
+   <hr>
+   <div class="tile-text-box"> 
+    <a style="text-decoration: none;" href="/en_in/insurance/ey-insurance-outlook-what-should-insurers-do-to-prepare-for-tom" class="hyperlink-text-link"><h4 class="article-title is-clipped">EY Insurance Outlook: what should insurers do to prepare for tomorrow?</h4></a>  
+    <p class="article-subheading is-clipped">Our insurance outlooks for 2019 confirm that technology and innovation are key to driving agile growth in a challeng…</p>  
+    <div class="article-details"> 
+      <img class="article-image" src="https://assets.ey.com/content/dam/ey-sites/ey-com/en_gl/topics/insurance/insurance-outlook/ey-aerial-shot-surfer-huge-waves-Uluwatu-static.jpg.rendition.690.460.jpg" alt="EY Insurance Outlook: what should insurers do to prepare for tomorrow?">
+      <br>
+      <br>
+      <span class="multiple-line article-date">5 Dec 2018 | </span>  
+     <span> <a style="text-decoration: none;" href="/en_in/people/david-hollander" class="article-author hyperlink-text-link">David Hollander</a> </span>  
+    </div> 
+   </div>
+   <hr>
+   <div class="tile-text-box"> 
+    <a style="text-decoration: none;" href="/en_in/insurance/five-tech-trends-that-will-define-the-future-of-insurance" class="hyperlink-text-link"><h4 class="article-title is-clipped">Five tech trends that will define the future of insurance</h4></a>  
+    <p class="article-subheading is-clipped">Tomorrow’s insurance leaders must prepare for the adoption of blockchain and big data, the growing challenges of cyber…</p>  
+    <div class="article-details"> 
+      <img class="article-image" src="https://assets.ey.com/content/dam/ey-sites/ey-com/en_gl/topics/insurance/ey-chef-kitchen-smartphone.jpg.rendition.690.460.jpg" alt="Five tech trends that will define the future of insurance">
+      <br>
+      <br>
+      <span class="multiple-line article-date">9 Jan 2020 | </span>  
+     <span> <a style="text-decoration: none;" href="/en_in/people/ey" class="article-author hyperlink-text-link">EY India</a> </span>  
+    </div> 
+   </div>
+   <hr>
+  </ng-container>
+</div>
+ 

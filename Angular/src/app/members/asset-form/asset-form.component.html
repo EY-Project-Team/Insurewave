@@ -1,0 +1,23 @@
+<form #registerForm="ngForm" (ngSubmit)="sendAssets()" autocomplete="off">
+    <br>
+    <input type="text" class="form-control" name="assetName" [(ngModel)]="postassets.assetName"
+        placeholder="Name">
+        <br>
+    <input type="text" class="form-control" name="assetPrice" [(ngModel)]="postassets.assetPrice"
+        placeholder="$">
+        <br>
+    <input type="text" class="form-control" name="quantity" [(ngModel)]="postassets.quantity"
+        placeholder="Quantity">
+    <br>
+    General : <input type="radio" name="contentType" value="General"
+        [(ngModel)]="postassets.contentType"> <p> </p>
+    Precious : <input type="radio" name="contentType" value="Precious"
+        [(ngModel)]="postassets.contentType"> <p> </p>
+        
+    Fragile : <input type="radio" name="contentType" value="Fragile"
+        [(ngModel)]="postassets.contentType">
+        <hr>
+    <button type="submit" class="btn btn-primary" style="margin: 1%;">Save changes</button>
+    <br>
+    <button type="button" class="btn btn-danger" (click)="cancl()" style="margin: 1%;">Close</button>
+</form>

@@ -13,7 +13,7 @@ Insurer user will accept or reject the contract, if its accepted it will be sent
 This is a blockchain and IOT based project, it’s an 1.5 year project if we use these technologies it will take more time. Above is the stripped down requirement of the project.
 
 
-<img src="https://i.ytimg.com/vi/n84GZwBHJf8/mqdefault.jpg" alt="Logo" width="400" height="320" style="max-width: 100%;">
+<img src="https://res.cloudinary.com/crunchbase-production/image/upload/c_lpad,f_auto,q_auto:eco,dpr_1/baohheerrmviww7dk5gx" alt="Logo" width="400" height="320" style="max-width: 100%;">
 
 ### Built With
 
